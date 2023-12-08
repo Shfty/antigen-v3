@@ -1,0 +1,121 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "cargo build --target=x86_64-pc-windows-gnu",
+			"label": "Rust: Build Debug (GNU)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"command": "cargo build --target=x86_64-pc-windows-gnu --release",
+			"label": "Rust: Build Release (GNU)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "cargo build --target=x86_64-pc-windows-msvc",
+			"label": "Rust: Build Debug (MSVC)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"command": "cargo build --target=x86_64-pc-windows-msvc --release",
+			"label": "Rust: Build Release (MSVC)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"command": "cargo test",
+			"label": "Rust: Run Tests"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "test",
+			"command": "cargo test",
+			"args": [
+				"--",
+				"--nocapture",
+				"--test-threads=1"
+			],
+			"label": "Rust: Run Tests (Show Output)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "test",
+			"command": "cargo +nightly build --target=x86_64-pc-windows-msvc -Ztimings",
+			"label": "Rust: Build (Timings MSVC)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "test",
+			"command": "cargo +nightly build --target=x86_64-pc-windows-gnu -Ztimings",
+			"label": "Rust: Build (Timings GNU)"
+		},
+		{
+			"type": "shell",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "test",
+			"command": "cargo wgsl",
+			"label": "cargo wgsl"
+		},
+		{
+			"type": "cargo",
+			"command": "check",
+			"args": [
+				"--target=x86_64-pc-windows-msvc"
+			],
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "rust: cargo check"
+		},
+		{
+			"type": "cargo",
+			"command": "test --target=x86_64-pc-windows-msvc -- --nocapture --test-threads=1",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "rust: cargo test"
+		}
+	]
+}

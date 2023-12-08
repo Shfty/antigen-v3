@@ -1,0 +1,20 @@
+[package]
+authors = ["Josh Palmer <jpalmerwatkins@gmail.com>"]
+edition = "2018"
+name = "antigen_winit"
+version = "0.1.0"
+
+[features]
+default = ["egui"]
+
+[dependencies]
+async-std = "1.9.0"
+async-trait = "0.1.50"
+futures = "0.3.14"
+winit = "0.25.0"
+
+antigen_rendering = {path = "../antigen_rendering"}
+deebs = {path = "../deebs"}
+
+egui = {version = "0.12.0", optional = true}
+tracing = {version = "0.1.26", optional = true}

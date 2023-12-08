@@ -1,0 +1,12 @@
+[package]
+authors = ["Josh Palmer <jpalmerwatkins@gmail.com>"]
+edition = "2018"
+name = "antigen_log"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = "1.9.0"
+deebs = {path = "../deebs"}
+log = "0.4.14"

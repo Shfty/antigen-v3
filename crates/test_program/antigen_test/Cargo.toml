@@ -1,0 +1,40 @@
+[package]
+authors = ["Josh Palmer <jpalmerwatkins@gmail.com>"]
+edition = "2018"
+name = "antigen_test"
+version = "0.1.0"
+
+[features]
+default = ["tracing"]
+
+[dependencies]
+async-std = "1.9.0"
+futures = "0.3.15"
+log = {version = "0.4.14", features = ["std"]}
+profiling = {version = "1.0.2", features = ["profile-with-tracing"]}
+tracing-subscriber = {version = "0.2.18", features = ["registry"]}
+
+deebs = {path = "../../deebs", features = ["tracing"]}
+
+antigen_async = {path = "../../antigen_async"}
+antigen_components = {path = "../../antigen_components"}
+antigen_crossterm = {path = "../../antigen_crossterm", features = ["tracing"]}
+antigen_debug_stdout = {path = "../../antigen_debug_stdout", features = ["tracing"]}
+antigen_egui = {path = "../../antigen_egui", features = ["tracing"]}
+antigen_log = {path = "../../antigen_log"}
+antigen_rendering = {path = "../../antigen_rendering", features = ["tracing"]}
+antigen_tracing = {path = "../../antigen_tracing"}
+antigen_wgpu = {path = "../../antigen_wgpu", features = ["tracing"]}
+antigen_winit = {path = "../../antigen_winit", features = ["tracing"]}
+antigen_winit_wgpu = {path = "../../antigen_winit_wgpu", features = ["tracing"]}
+
+database = {path = "../database", features = ["tracing"]}
+debugger_egui = {path = "../debugger_egui", features = ["tracing"]}
+hello_egui = {path = "../hello_egui", features = ["tracing"]}
+hello_quads = {path = "../hello_quads", features = ["tracing"]}
+hello_triangle = {path = "../hello_triangle", features = ["tracing"]}
+integrator = {path = "../integrator", features = ["tracing"]}
+logger_egui = {path = "../logger_egui", features = ["tracing"]}
+tracer_egui = {path = "../tracer_egui", features = ["tracing"]}
+
+tracing = {version = "0.1.26", optional = true}

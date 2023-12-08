@@ -1,0 +1,23 @@
+[package]
+authors = ["Josh Palmer <jpalmerwatkins@gmail.com>"]
+edition = "2018"
+name = "antigen_winit_wgpu"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["egui"]
+
+[dependencies]
+async-std = "1.9.0"
+async-trait = "0.1.50"
+futures = "0.3.15"
+
+antigen_wgpu = {path = "../antigen_wgpu"}
+antigen_winit = {path = "../antigen_winit"}
+deebs = {path = "../deebs"}
+antigen_rendering = {path = "../antigen_rendering"}
+
+egui = {version = "0.12.0", optional = true}
+tracing = {version = "0.1.26", optional = true}

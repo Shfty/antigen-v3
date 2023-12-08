@@ -1,0 +1,27 @@
+[workspace]
+members = [
+  "crates/borrow_derive",
+  "crates/deebs_macros",
+  "crates/deebs",
+  "crates/antigen_async",
+  "crates/antigen_components",
+  "crates/antigen_rendering",
+  "crates/antigen_winit",
+  "crates/antigen_wgpu",
+  "crates/antigen_winit_wgpu",
+  "crates/antigen_egui",
+  "crates/antigen_log",
+  "crates/antigen_tracing",
+  "crates/antigen_debug_stdout",
+  "crates/test_program/antigen_test",
+  "crates/test_program/database",
+  "crates/test_program/hello_triangle",
+  "crates/test_program/hello_quads",
+  "crates/test_program/hello_egui",
+  "crates/test_program/debugger_egui",
+  "crates/test_program/integrator",
+]
+
+[profile.release]
+debug = true
+incremental = true

@@ -1,0 +1,24 @@
+[package]
+authors = ["Josh Palmer <jpalmerwatkins@gmail.com>"]
+edition = "2018"
+name = "logger_egui"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = "1.9.0"
+async-trait = "0.1.50"
+egui = "0.12.0"
+log = "0.4.14"
+
+antigen_components = {path = "../../antigen_components"}
+antigen_egui = {path = "../../antigen_egui"}
+antigen_log = {path = "../../antigen_log"}
+antigen_rendering = {path = "../../antigen_rendering"}
+antigen_wgpu = {path = "../../antigen_wgpu"}
+antigen_winit = {path = "../../antigen_winit"}
+antigen_winit_wgpu = {path = "../../antigen_winit_wgpu"}
+deebs = {path = "../../deebs"}
+
+tracing = {version = "0.1.26", optional = true}
